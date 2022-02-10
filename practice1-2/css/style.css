@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+* {
+	font-family: Roboto;
+}
+
+h1, h2 {
+	background-color: black;
+	color: white;
+	padding: 1vh 1vh 1vh 2vh;
+	border-radius: 10px;
+}
+
+section {
+	padding-bottom: 3vh;
+}
+
+p {
+	margin: 1vh;
+	font-weight: bold;
+}
+
+a {
+	font-weight: bold;
+	color: #00308F;
+}
+
+a:visited {
+	color: #F05C85;
+}
+
+img {
+	border: solid #C2C8CA 1px;
+	border-radius: 4px;
+}
