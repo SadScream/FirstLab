@@ -1,2 +1,2 @@
-# FirstLab
+# Labs
  
