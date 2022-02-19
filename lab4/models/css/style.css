@@ -1,0 +1,32 @@
+@import url("reset.css");
+
+.outer {
+	font-size: 0;
+	width: 500px;
+}	
+
+div {
+	width: 200px;
+	display: inline-block;
+}
+
+.one {
+	height: 200px;
+	background-color: black;
+}
+
+.two {
+	height: 200px;
+	background-color: green;
+}
+
+a {
+	width: 200px;
+	height: 100px;
+	display: block;
+}
+
+img {
+	width: 100px;
+	display: block;
+}

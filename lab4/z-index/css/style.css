@@ -1,0 +1,24 @@
+@import url("reset.css");
+
+div {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	position: absolute;
+}
+
+.one {
+	background-color: red;
+	bottom: 150px;
+}
+
+.two {
+	background-color: blue;
+	bottom: 300px;
+	z-index: 1;
+}
+
+.three {
+	background-color: green;
+	bottom: 450px;
+}
