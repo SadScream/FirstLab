@@ -1,0 +1,21 @@
+@import url("reset.css");
+
+/*.vminmax {
+	height: 40vmax;
+	width: 40vmin;
+	background-color: green;
+}*/
+
+.outer {
+	width: 900px;
+	height: 400px;
+	background-color: red;
+	display: flex;
+	justify-content: space-between;
+}
+
+.inner {
+	height: 400px;
+	width: calc((100% - 30px)/4);
+	background-color: black;
+}

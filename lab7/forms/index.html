@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+	<meta charset="UTF-8">
+	<meta description="template code">
+	<meta keyword="template, test">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="page">
+		<form>
+			<div class="columns one">
+				<fieldset class="personal">
+				<label for="fio">ФИО:</label>
+				<input type="text" name="fio" placeholder="Иванов Иван">
+
+				<label for="email">Email:</label>
+				<input type="email" name="email" placeholder="index@example.com">
+
+				<label for="password">Пароль</label>
+				<input type="password" name="password">
+				
+				<label for="birthDate">Дата рождения:</label>
+				<input type="date" name="birthDate">
+			</fieldset>
+			</div>
+
+			<div class="columns two">
+				<fieldset class="type">
+					<label for="sex">Пол</label>
+					<input type="radio" name="sex" value="male"><span>Муж</span>
+					<input type="radio" name="sex" value="female"><span>Жен</span>
+
+					<label for="">Как у вас настроение?</label>
+					<select name="mood">
+						<option value="good">Хорошо</option>
+						<option value="bad">Плохо</option>
+					</select>
+				</fieldset>
+
+				<fieldset class="message">
+					<label for="message">Ваши пожелания</label>
+					<textarea name="message" placeholder="Ваше сообщение"></textarea>
+					<input type="checkbox"><span>Вы согласны с правилами сайта?</span>
+				</fieldset>
+
+				<input type="submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
