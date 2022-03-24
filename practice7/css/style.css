@@ -78,7 +78,7 @@ header {
 	display: block;
 }
 
-.txt_field input[type="text"] {
+.txt_field input[type="text"],.txt_field input[type="email"] {
 	display: block;
 	width: 100%;
 	padding: 0;
@@ -90,7 +90,7 @@ header {
 	font-size: 1.4rem;
 }
 
-.txt_field input[type="text"]:focus {
+.txt_field input[type="text"]:focus, .txt_field input[type="email"]:focus {
 	outline: none;
 }
 
@@ -132,7 +132,7 @@ footer {
 		padding: 3vmin 0;
 	}
 
-	.txt_field input[type="text"] {
+	.txt_field input[type="text"], .txt_field input[type="email"] {
 		font-size: 1rem;
 	}
 }
