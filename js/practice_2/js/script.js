@@ -19,28 +19,28 @@ ageAgain.addEventListener("input", () => { task(getNextAge, result4, ageAgain) }
 grow.addEventListener("input", () => { task(canRide, result5, grow) });
 
 function getAge(...values) {
-    return parseInt(values[0])+1;
+    return values[0]+1;
 }
 
 function getRemainder(...values) {
-    return parseInt(values[0]) % parseInt(values[1]);
+    return values[0] % values[1];
 }
 
 function faceControl(...values) {
-    if (parseInt(values[0]) >= 18)
+    if (values[0] >= 18)
         return "Welcome";
     else
         return "Отказ";
 }
 
 function getNextAge(...values) {
-    return isNaN(parseInt(values[0])) ? 0 : parseInt(values[0])+1;
+    return isNaN(values[0]) ? 0 : values[0]+1;
 }
 
 function canRide(...values) {
-    return parseInt(values[0]) >= 140;
+    return values[0] >= 140;
 }
 
 function task(func, result, ...elements) {
-    result.textContent = func(...elements.map((value) => value.value)).toString();
+    result.textContent = func(...elements.map((value) => parseInt(value.value))).toString();
 }
