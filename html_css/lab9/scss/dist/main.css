@@ -1,0 +1,79 @@
+body {
+  color: magenta;
+}
+
+.message, .message-two {
+  background-color: pink;
+  border: 1px solid green;
+}
+
+.main, .message-two {
+  font-family: Arial;
+}
+
+.message-two {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+ul:nth-child(1) {
+  background-color: grey;
+}
+ul:nth-child(2) {
+  background-color: grey;
+}
+ul:nth-child(3) {
+  background-color: grey;
+}
+ul:nth-child(4) {
+  background-color: grey;
+}
+ul:nth-child(5) {
+  background-color: grey;
+}
+ul:nth-child(6) {
+  background-color: grey;
+}
+ul:nth-child(7) {
+  background-color: grey;
+}
+ul:nth-child(8) {
+  background-color: grey;
+}
+ul:nth-child(9) {
+  background-color: grey;
+}
+ul:nth-child(10) {
+  background-color: grey;
+}
+
+.element-20px {
+  min-width: 20px;
+}
+
+.element-50px {
+  min-width: 50px;
+}
+
+.element-100px {
+  min-width: 100px;
+}
+
+.element-150px {
+  min-width: 150px;
+}
+
+.message-type {
+  background-color: blue;
+}
+
+.message-type {
+  background-color: red;
+}

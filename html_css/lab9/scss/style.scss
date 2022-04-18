@@ -1,0 +1,168 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'shared' as s with (
+    $color: green
+);
+
+body {
+    color: shared.$color;
+}
+
+//ВЛОЖЕННОСТЬ
+header {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        color: green;
+    }
+
+    > {
+        span {
+            color: orange;
+        }
+
+        a {
+            font-size: 2rem;
+        }
+    }
+}
+
+//РОДИТЕЛЬСКИЙ СЕЛЕКТОР
+a {
+    &:hover {
+        color:red
+    }
+    &:active {
+        text-decoration: none;
+    }
+    &:visited  {
+        color: green;
+    }
+}
+
+.blog_post {
+    padding: 2em 0;
+    &__header {
+        padding: 1em 0;
+    }
+}
+
+//ПЕРЕМЕННЫЕ
+
+$border-width: 2px; // глобальная
+$width: 200.34px;
+
+article {
+    $border-width: 4px; // локальная
+    border: $border-width solid black;
+}
+
+$font-family: "Helvetica";
+$file-name: "logo.png";
+
+article {
+    font-family: $font-family;
+    background-image: url("/img/#{$file-name}");
+}
+
+//unquoted string
+$type: solid;
+$prefix: -ms;
+
+article {
+    border: 1px $type black;
+    #{$prefix}-flex: 1;
+}
+
+// $bg: #cecece;
+$bg: rgba(255, 144, 230, .5);
+
+body {
+    background-color: $bg;
+}
+
+//СПИСКИ
+
+$numbers: (12px, 40px, 50%, 1rem);
+$border: 1px solid red;
+
+section {
+    min-width: list.nth($numbers, 2);
+    border: $border;
+}
+
+//MAP - словари
+
+$border_map: ("width": 1px, 
+    "color": black, 
+    "type": solid);
+
+footer {
+    border: map.get($border_map, "width") map.get($border_map, "type");
+}
+
+//ЛОГИЧЕСКИЕ ТИПЫ
+$var1: true;
+$var2: false;
+
+//null
+$varnull: null; // все что null - false
+
+//ОПЕРАТОРЫ
+//СРАВНЕНИЯ
+
+@debug 1px == 1px;
+@debug 1 == 1px; // false
+
+@debug 1 != 1px;
+@debug "solid"==solid; // true
+
+@debug (1px solid) == (1px, solid); // true
+
+@debug 1 >= 2;
+
+@debug 1 + 2; // 3
+
+$width: 100px;
+$var: 50px;
+
+article {
+    width: $width + $var;
+    font-family: "Arial" + " Neue";
+}
+
+// логические операторы
+// not and or
+
+// MIXIN
+
+@mixin no_margin() {
+    margin: 0;
+    color: green;
+}
+
+@mixin border($type, $color: black) {
+    border: 1px $type $color;
+}
+
+body {
+    @include no_margin();
+    @include border(solid);
+}
+
+@mixin link() {
+    &:hover {
+        text-decoration: none;
+        color: red;
+        @content;
+    }
+}
+
+a {
+    font-size: 0.9rem;
+    @include link() {
+        padding: 1px;
+    }
+}

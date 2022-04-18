@@ -1,0 +1,88 @@
+// FORWARD
+
+@use 'framework';
+
+body {
+    color: framework.$color;
+}
+
+footer {
+    @include framework.border();
+    @include framework.paddings();
+}
+
+// EXTEND
+
+.message {
+    background-color: pink;
+    border: 1px solid green;
+}
+
+.main {
+    font-family: Arial;
+}
+
+.message-two {
+    font-size: 1.5rem;
+    font-weight: bold;
+    @extend .message, .main;
+}
+
+// УСЛОВИЯ IF-ELSE
+
+@mixin paddings($x: 'nullify') {
+    padding-left: 0;
+    padding-right: 0;
+
+    @if $x == 'nullify' {
+        padding-top: 0;
+        padding-bottom: 0;
+    } @else if $x == 'one' {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    } @else {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+body {
+    @include paddings();
+}
+
+
+// ЦИКЛЫ
+// FOR
+
+// @for $var from start to end {
+    
+// }
+@mixin child() {
+    @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+            background-color: grey;
+        }
+    }
+}
+
+ul {
+    @include child();
+}
+
+// EACH
+
+$widths: 20px 50px 100px 150px;
+
+@each $width in $widths {
+    .element-#{$width} {
+        min-width: $width;
+    }
+}
+
+$messages: ("text": blue, "alert": red);
+
+@each $type, $color in $messages {
+    .message-#{type} {
+        background-color: $color;
+    }
+}
