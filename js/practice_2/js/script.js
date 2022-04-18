@@ -12,33 +12,33 @@ const result1 = document.querySelector("#resultFirstExercise"),
       result5 = document.querySelector("#resultFifthExercise");
 
 age.addEventListener("input", () => { task(getAge, result1, age) });
-delimoe.addEventListener("input", () => { task(getRemainder, result2, delimoe, delitel) });
-delitel.addEventListener("input", () => { task(getRemainder, result2, delimoe, delitel) });
+delimoe.addEventListener("input", () => { task(getReminder, result2, delimoe, delitel) });
+delitel.addEventListener("input", () => { task(getReminder, result2, delimoe, delitel) });
 controlAge.addEventListener("input", () => { task(faceControl, result3, controlAge) });
 ageAgain.addEventListener("input", () => { task(getNextAge, result4, ageAgain) });
 grow.addEventListener("input", () => { task(canRide, result5, grow) });
 
-function getAge(...values) {
-    return values[0]+1;
+function getAge(age) {
+    return age+1;
 }
 
-function getRemainder(...values) {
-    return values[0] % values[1];
+function getReminder(left, right) {
+    return left % right;
 }
 
-function faceControl(...values) {
-    if (values[0] >= 18)
+function faceControl(age) {
+    if (age >= 18)
         return "Welcome";
     else
         return "Отказ";
 }
 
-function getNextAge(...values) {
-    return isNaN(values[0]) ? 0 : values[0]+1;
+function getNextAge(age) {
+    return isNaN(age) ? 0 : age+1;
 }
 
-function canRide(...values) {
-    return values[0] >= 140;
+function canRide(grow) {
+    return grow >= 140;
 }
 
 function task(func, result, ...elements) {
