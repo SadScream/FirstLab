@@ -64,9 +64,9 @@ function getEpisodes(data) {
     let obj = {
         title: data[0],
         series: parseInt(data[1])
-    }
+    };
 
-    return `Аниме ${obj.title} включает ${obj.series} серий`
+    return `Аниме ${obj.title} включает ${obj.series} серий`;
 }
 
 function triple(digit) {
