@@ -1,0 +1,12 @@
+import React, { Component } from 'react'
+
+export default class Brief extends Component {
+  render() {
+    return (
+        <section class="paragraph">
+            <h2 id="brief" class="sectionText">Brief</h2>
+            <p class="mainText">Saitama (サイタマ, Saitama) is the main protagonist of the series and the titular One-Punch Man. He is the most powerful being to exist in the series. Saitama faces a self-imposed existential crisis, as he is now too powerful to gain any thrill from battle.</p>
+        </section>
+    )
+  }
+}
